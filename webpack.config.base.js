@@ -37,16 +37,6 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new CleanWebpackPlugin(), // 清理输出目录
-		{
-      apply: (compiler) => {
-        compiler.hooks.done.tap('DonePlugin', (stats) => {
-					console.log('Compile is done !')
-					setTimeout(()=> {
-						process.exit(0)
-					})
-        });
-      }
-    }
+		new CleanWebpackPlugin() // 清理输出目录
 	]
 }
